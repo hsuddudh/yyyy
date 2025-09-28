@@ -73,9 +73,3 @@ Tab:AddButton({
 game:GetService("Players").LocalPlayer.Backpack.ClassicSword.Animations.AttackAnimations.Attack2.HitboxSize.Value ="500000000, 500000000, 500000000"
     end
 })
-Name ="复古剑:间隔",
-    Callback = function()
-    game:GetService("Players").LocalPlayer.Backpack.ClassicSword.Animations.AttackAnimations.Attack1.CooldownTimer.Value ="0.2"
-game:GetService("Players").LocalPlayer.Backpack.ClassicSword.Animations.AttackAnimations.Attack2.CooldownTimer.Value ="0.2"
-    end
-})
