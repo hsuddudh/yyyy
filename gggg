@@ -41,8 +41,8 @@ Start = tick()
 Heartbeat:Connect(HeartbeatUpdate)
 local Window = OrionLib:MakeWindow({Name = "脑叶公司脚本", HidePremium = false, SaveConfig = true,IntroText = "欢迎使用脑叶公司脚本）", ConfigFolder = "作者：noob"})
 game:GetService("StarterGui"):SetCore("SendNotification",{ Title = "脑叶公司脚本"; Text ="欢迎使用脑叶公司脚本"; Duration = 4; })
-game:GetService("StarterGui"):SetCore("SendNotification",{ Title = "脑叶公司脚本"; Text ="脑叶公司脚本:作者noob"; Duration = 4; })
-game:GetService("StarterGui"):SetCore("SendNotification",{ Title = "脑叶公司脚本"; Text ="脑叶公司脚本"; Duration = 4; })
+game:GetService("StarterGui"):SetCore("SendNotification",{ Title = "脑叶公司脚本"; Text ="脑叶公司脚本:作者:noob"; Duration = 4; })
+game:GetService("StarterGui"):SetCore("SendNotification",{ Title = "脑叶公司脚本"; Text ="脑叶公司脚本:副作者:shi"; Duration = 4; })
 local Tab = Window:MakeTab({
     Name = "用户信息",
     Icon = "rbxassetid://4483345998",
@@ -54,19 +54,21 @@ Tab:AddParagraph("你的注入器:"," "..identifyexecutor().."")
 Tab:AddParagraph("服务器的ID"," "..game.GameId.."")
 
 local Tab = Window:MakeTab({
-    Name = "不能用",
+    Name = "主要",
     Icon = "rbxassetid://4483345998",
     PremiumOnly = false
 })
 Tab:AddButton({
-    Name ="不能用",
+    Name ="秒杀",
     Callback = function()
-    loadstring(game:HttpGet("https://shz.al/Zhpp"))()
+    game:GetService("Players").LocalPlayer.Backpack.ClassicSword.SettingValues.MaxDamageValue.Value ="9223372036854776000"
+game:GetService("Players").LocalPlayer.Backpack.ClassicSword.SettingValues.StaminaUsage.Value ="9223372036854776000"
+game:GetService("Players").LocalPlayer.Backpack.ClassicSword.SettingValues.MinDamageValue.Value ="9223372036854776000"
     end
 })
 Tab:AddButton({
-    Name ="不能用",
+    Name ="范围",
     Callback = function()
-    loadstring(game:HttpGet("https://shz.al/Zhpp"))()
+    game:GetService("Players").LocalPlayer.Backpack.ClassicSword.Animations.AttackAnimations.Attack1.HitboxSize.Value="50000000, 50000000, 50000000"
     end
 })
