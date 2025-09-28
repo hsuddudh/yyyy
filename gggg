@@ -59,7 +59,7 @@ local Tab = Window:MakeTab({
     PremiumOnly = false
 })
 Tab:AddButton({
-    Name ="秒杀",
+    Name ="复古剑:秒杀",
     Callback = function()
     game:GetService("Players").LocalPlayer.Backpack.ClassicSword.SettingValues.MaxDamageValue.Value ="9223372036854776000"
 game:GetService("Players").LocalPlayer.Backpack.ClassicSword.SettingValues.StaminaUsage.Value ="9223372036854776000"
@@ -67,8 +67,15 @@ game:GetService("Players").LocalPlayer.Backpack.ClassicSword.SettingValues.MinDa
     end
 })
 Tab:AddButton({
-    Name ="范围",
+    Name ="复古剑:范围",
     Callback = function()
-    game:GetService("Players").LocalPlayer.Backpack.ClassicSword.Animations.AttackAnimations.Attack1.HitboxSize.Value="50000000, 50000000, 50000000"
+    game:GetService("Players").LocalPlayer.Backpack.ClassicSword.Animations.AttackAnimations.Attack1.HitboxSize.Value ="500000000, 500000000, 500000000"
+game:GetService("Players").LocalPlayer.Backpack.ClassicSword.Animations.AttackAnimations.Attack1.HitboxSize
+    end
+})
+  Name ="复古剑:间隔",
+    Callback = function()
+    game:GetService("Players").LocalPlayer.Backpack.ClassicSword.Animations.AttackAnimations.Attack1.CooldownTimer.Value ="0.2"
+game:GetService("Players").LocalPlayer.Backpack.ClassicSword.Animations.AttackAnimations.Attack2.CooldownTimer.Value ="0.2"
     end
 })
