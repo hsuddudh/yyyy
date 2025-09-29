@@ -85,7 +85,7 @@ Tab:AddButton({
     Name ="震爆棍:间隔",
     Callback = function()
 game:GetService("Players").LocalPlayer.Backpack.Baton.Animations.AttackAnimations.Attack1.CooldownTimer.Value ="0.2"
-game:GetService("Players").LocalPlayer.Backpack.Baton.Animations.AttackAnimations.Attack2.CooldownTimer.Value ="0.2
+game:GetService("Players").LocalPlayer.Backpack.Baton.Animations.AttackAnimations.Attack2.CooldownTimer.Value ="0.2"
 game:GetService("Players").LocalPlayer.Backpack.Baton.Animations.AttackAnimations.Attack3.CooldownTimer.Value ="0.2"
     end
 })
