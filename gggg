@@ -1,49 +1,60 @@
-local CoreGui = game:GetService("StarterGui")CoreGui:SetCore("SendNotification", {    Title = "脑叶公司脚本",    Text = "耐心等待（反挂机已开启）",    Duration = 5, })print("反挂机开启")		local vu = game:GetService("VirtualUser")		game:GetService("Players").LocalPlayer.Idled:connect(function()		   vu:Button2Down(Vector2.new(0,0),workspace.CurrentCamera.CFrame)		   wait(1)		   vu:Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)		end)
+local library = loadstring(game:HttpGet("https://pastebin.com/raw/nBq2D86q"))()
+local window = library:new("")
 
-local OrionLib = loadstring(game:HttpGet('https://pastebin.com/raw/SePpsSPZ'))()
+local creds = window:Tab("信息",'16060333448')
 
-local Window = OrionLib:MakeWindow({Name = "脑叶公司脚本", HidePremium = false, SaveConfig = false, IntroText = "欢迎使用", ConfigFolder = "欢迎使用"})
+local bin = creds:section("玩家信息",true)
 
-local Tab = Window:MakeTab({
-    Name = "脚本公告",
-    Icon = "rbxassetid://10527577695",
-    PremiumOnly = false
-})
+    bin:Label("你的用户名:"..game.Players.LocalPlayer.Character.Name)
+    bin:Label("你的注入器:"..identifyexecutor())
+    
+    local bin = creds:section("作者信息",true)
+    bin:Label("作者:noob")
+    bin:Label("副作者:wee")
+    bin:Label("该脚本完全免费")
+    bin:Label("请不要倒卖")
+    bin:Label("每一个星期更新一次")
+    
+local credits = creds:section("关闭",true)
 
-Tab:AddParagraph("作者","noob")
-Tab:AddParagraph("副作者","wee")
-Tab:AddLabel("此脚本完全免费")
-Tab:AddLabel("作者QQ号1810494535")
-Tab:AddLabel("你的注入器:"..identifyexecutor())
-Tab:AddLabel("你的用户名:"..game.Players.LocalPlayer.Character.Name)
-Tab:AddButton({
-   Name = "点击复制作者QQ",
-   Callback = function()
-    setclipboard("1810494535")
-   end
-})
-Tab:AddLabel("此脚本为免费缝合脚本")
-Tab:AddLabel("禁止倒卖")
+credits:Toggle("脚本框架变小一点", "", false, function(state)
+        if state then
+        game:GetService("CoreGui")["frosty"].Main.Style = "DropShadow"
+        else
+            game:GetService("CoreGui")["frosty"].Main.Style = "Custom"
+        end
+    end)
+    credits:Button("关闭脚本",function()
+        game:GetService("CoreGui")["frosty"]:Destroy()
+    end)
+local creds = window:Tab("通用",'16060333448')
 
-local Tab = Window:MakeTab({
-	Name = "主要",
-	Icon = "rbxassetid://10527577695",
-	PremiumOnly = false
-})
-Tab:AddToggle({
-	Name = "夜视",
-	Default = false,
-	Callback = function(Value)
-		if Value then
-		    game.Lighting.Ambient = Color3.new(1, 1, 1)
-		else
-		    game.Lighting.Ambient = Color3.new(0, 0, 0)
-		end
-	end
-})
-Tab:AddToggle({
-	Name = "飞行",
-	Callback = function()
-loadstring(game:HttpGet('https://pastebin.com/raw/U27yQRxS'))()
-	end 
-})
+local credits = creds:section("内容",true)
+    credits:Button("飞行",function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/gqv7PXAa"))()
+end)
+
+local credits = creds:section("内容",true)
+    credits:Button("震爆棍:秒杀",function()
+game:GetService("Players").LocalPlayer.Backpack.Baton.SettingValues.MaxDamageValue.Value ="9223372036854776000"
+game:GetService("Players").LocalPlayer.Backpack.Baton.SettingValues.MinDamageValue.Value ="9223372036854776000"
+game:GetService("Players").LocalPlayer.Backpack.Baton.SettingValues.StaminaUsage ="9223372036854776000"
+end)
+
+local credits = creds:section("内容",true)
+    credits:Button("震爆棍:间隔",function()
+    game:GetService("Players").LocalPlayer.Backpack.Baton.Animations.AttackAnimations.Attack1.CooldownTimer.Value ="0.2"game:GetService("Players").LocalPlayer.Backpack.Baton.Animations.AttackAnimations.Attack2.CooldownTimer.Value ="0.2"game:GetService("Players").LocalPlayer.Backpack.Baton.Animations.AttackAnimations.Attack3.CooldownTimer.Value ="0.2"
+end)
+
+local credits = creds:section("内容",true)
+    credits:Button("复古剑:秒杀",function()
+    game:GetService("Players").LocalPlayer.Backpack.ClassicSword.SettingValues.MaxDamageValue.Value ="9223372036854776000"
+game:GetService("Players").LocalPlayer.Backpack.ClassicSword.SettingValues.StaminaUsage.Value ="9223372036854776000"
+game:GetService("Players").LocalPlayer.Backpack.ClassicSword.SettingValues.MinDamageValue.Value ="9223372036854776000"
+end)
+
+local credits = creds:section("内容",true)
+    credits:Button("复古剑:间隔",function()
+    game:GetService("Players").LocalPlayer.Backpack.ClassicSword.Animations.AttackAnimations.Attack1.CooldownTimer.Value ="0.2"
+game:GetService("Players").LocalPlayer.Backpack.ClassicSword.Animations.AttackAnimations.Attack2.CooldownTimer.Value ="0.2"
+end)
