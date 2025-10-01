@@ -66,3 +66,10 @@ game:GetService("Players").LocalPlayer.Backpack.ClassicSword.SettingValues.MaxDa
 game:GetService("Players").LocalPlayer.Backpack.ClassicSword.SettingValues.StaminaUsage.Value ="9223372036854776000"
 game:GetService("Players").LocalPlayer.Backpack.ClassicSword.SettingValues.MinDamageValue.Value ="9223372036854776000"
 end)
+about:Button("圣宣:秒杀",function()
+game:GetService("Players").LocalPlayer.Backpack["Solemn Lament"].SettingValues.MaxDamageValue.Value ="9223372036854776000"
+game:GetService("Players").LocalPlayer.Backpack["Solemn Lament"].SettingValues.MinDamageValue.Value ="9223372036854776000"
+end)
+about:Button("圣宣:间隔",function()game:GetService("Players").LocalPlayer.Backpack["Solemn Lament"].Animations.AttackAnimations.Attack1.CooldownTimer ="0.2"
+game:GetService("Players").LocalPlayer.Backpack["Solemn Lament"].Animations.AttackAnimations.Attack2.CooldownTimer.Value ="0.3"
+end)
