@@ -1,70 +1,68 @@
-local CoreGui = game:GetService("StarterGui")CoreGui:SetCore("SendNotification", {    Title = "rz",    Text = "反挂机已开启",    Duration = 5, })print("反挂机开启")		local vu = game:GetService("VirtualUser")		game:GetService("Players").LocalPlayer.Idled:connect(function()		   vu:Button2Down(Vector2.new(0,0),workspace.CurrentCamera.CFrame)		   wait(1)		   vu:Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)		end)
-local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
-local Window = OrionLib:MakeWindow({Name = "rz", HidePremium = false, SaveConfig = false, IntroText = "rz", ConfigFolder = "rz"})
+local ui = loadstring(game:HttpGet("https://raw.githubusercontent.com/odhdshhe/lenglengui/refs/heads/main/JMJMUI.lua"))()        
+local win = ui:new("脑叶公司")
+--
+local UITab84 = win:Tab("信息",'16060333448')
 
-local Tab = Window:MakeTab({
-    Name = "公告",
-    Icon = "rbxassetid://7734068321",
-    PremiumOnly = false
-})
+local about = UITab84:section("『介绍』",true)
+about:Label("脑叶公司")
+about:Label("永久免费")
+about:Label("拒绝倒卖")
+about:Label("脑叶公司")
+about:Label("脑叶公司")
+about:Label("脑叶公司")
+about:Label("脑叶公司")
+about:Label("脑叶公司")
+about:Label("脑叶公司")
+about:Label("脑叶公司")
+about:Button("无",function()
+    setclipboard("脑叶公司")
+end)
 
-Tab:AddParagraph("作者","noob")
-Tab:AddLabel("。。。")
-Tab:AddLabel("。。。")
-Tab:AddLabel("禁止倒卖")
+about:Button("脑叶公司",function()
+    setclipboard("脑叶公司")
+end)
+
+about:Button("脑叶公司",function()
+    setclipboard("脑叶公司")
+end)
+
+local about = UITab84:section("『介绍』",true)
+
+about:Toggle("脚本框架变小一点", "", false, function(state)
+        if state then
+        game:GetService("CoreGui")["frosty"].Main.Style = "DropShadow"
+        else
+            game:GetService("CoreGui")["frosty"].Main.Style = "Custom"
+        end
+    end)
+    about:Button("关闭脚本",function()
+        game:GetService("CoreGui")["frosty"]:Destroy()
+    end)
 
 
-local Tab = Window:MakeTab({
-    Name = "主要",
-    Icon = "rbxassetid://4483345998",
-    PremiumOnly = false
-})
+local UITab84 = win:Tab("普通功能",'16060333448')
 
-Tab:AddButton({
-    Name ="复古剑:秒杀",
-    Callback = function()
-    game:GetService("Players").LocalPlayer.Backpack.ClassicSword.SettingValues.MaxDamageValue.Value ="9223372036854776000"
-game:GetService("Players").LocalPlayer.Backpack.ClassicSword.SettingValues.StaminaUsage.Value ="9223372036854776000"
-game:GetService("Players").LocalPlayer.Backpack.ClassicSword.SettingValues.MinDamageValue.Value ="9223372036854776000"
-    end
-})
+local about = UITab84:section("『功能』",true)
+  
 
-Tab:AddButton({
-    Name ="复古剑:间隔",
-    Callback = function()
-    game:GetService("Players").LocalPlayer.Backpack.ClassicSword.Animations.AttackAnimations.Attack1.CooldownTimer.Value ="0.2"
-game:GetService("Players").LocalPlayer.Backpack.ClassicSword.Animations.AttackAnimations.Attack2.CooldownTimer.Value ="0.2"
-    end
-})
+about:Button("飞行",function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/dingding123hhh/tt/main/jm%E9%A3%9E..lua"))()
+end)
 
-Tab:AddButton({
-    Name ="震爆棍:秒杀",
-    Callback = function()
+about:Button("震爆棍:秒杀",function()
 game:GetService("Players").LocalPlayer.Backpack.Baton.SettingValues.MinDamageValue.Value ="9223372036854776000"
 game:GetService("Players").LocalPlayer.Backpack.Baton.SettingValues.MaxDamageValue.Value ="9223372036854776000"
-game:GetService("Players").LocalPlayer.Backpack.Baton.SettingValues.StaminaUsage.Value ="9223372036854776000"
-end
-})
+game:GetService("Players").LocalPlayer.Backpack.Baton.SettingValues.StaminaUsage ="9223372036854776000"
+end)
 
-Tab:AddButton({
-    Name ="震爆棍:间隔",
-    Callback = function()
-game:GetService("Players").LocalPlayer.Backpack.Baton.Animations.AttackAnimations.Attack1.CooldownTimer.Value ="0.2"
-game:GetService("Players").LocalPlayer.Backpack.Baton.Animations.AttackAnimations.Attack2.CooldownTimer.Value ="0.2"
-game:GetService("Players").LocalPlayer.Backpack.Baton.Animations.AttackAnimations.Attack3.CooldownTimer.Value ="0.2"
-    end
-})
-
-Tab:AddToggle({
-	Name = "夜视",
-	Default = false,
-	Callback = function(Value)
-		if Value then
-		    game.Lighting.Ambient = Color3.new(1, 1, 1)
-		else
-		    game.Lighting.Ambient = Color3.new(0, 0, 0)
-		end
-	end
-})
-
-OrionLib:Init()
+about:Button("震爆棍:间隔",function()
+game:GetService("Players").LocalPlayer.Backpack.Baton.Animations.AttackAnimations.Attack2.CooldownTimer.Value ="0.2"game:GetService("Players").LocalPlayer.Backpack.Baton.Animations.AttackAnimations.Attack1.CooldownTimer.Value ="0.2"game:GetService("Players").LocalPlayer.Backpack.Baton.Animations.AttackAnimations.Attack3.CooldownTimer.Value ="0.2"
+end)
+about:Button("复古剑:间隔",function()
+game:GetService("Players").LocalPlayer.Backpack.ClassicSword.Animations.AttackAnimations.Attack1.CooldownTimer.Value ="0.2"game:GetService("Players").LocalPlayer.Backpack.ClassicSword.Animations.AttackAnimations.Attack2.CooldownTimer.Value ="0.2"
+end)
+about:Button("复古剑:秒杀",function()
+game:GetService("Players").LocalPlayer.Backpack.ClassicSword.SettingValues.MaxDamageValue.Value ="9223372036854776000"
+game:GetService("Players").LocalPlayer.Backpack.ClassicSword.SettingValues.StaminaUsage.Value ="9223372036854776000"
+game:GetService("Players").LocalPlayer.Backpack.ClassicSword.SettingValues.MinDamageValue.Value ="9223372036854776000"
+end)
