@@ -1,41 +1,23 @@
-local CoreGui = game:GetService("StarterGui")
+local CoreGui = game:GetService("StarterGui")CoreGui:SetCore("SendNotification", {    Title = "rz",    Text = "反挂机已开启",    Duration = 5, })print("反挂机开启")		local vu = game:GetService("VirtualUser")		game:GetService("Players").LocalPlayer.Idled:connect(function()		   vu:Button2Down(Vector2.new(0,0),workspace.CurrentCamera.CFrame)		   wait(1)		   vu:Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)		end)
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local Window = OrionLib:MakeWindow({Name = "rz", HidePremium = false, SaveConfig = false, IntroText = "rz", ConfigFolder = "rz"})
 
-CoreGui:SetCore("SendNotification", {
-    Title = "无",
-    Text = "正在加载",
-    Duration = 5, 
-})
-print("反挂机开启")
-		local vu = game:GetService("VirtualUser")
-		game:GetService("Players").LocalPlayer.Idled:connect(function()
-		   vu:Button2Down(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
-		   wait(1)
-		   vu:Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
-		end)
-local OrionLib = loadstring(game:HttpGet('https://pastebin.com/raw/SePpsSPZ'))()
-local Window = OrionLib:MakeWindow({Name = "作者：noob", HidePremium = false, SaveConfig = true,IntroText = "副作者：shi", ConfigFolder = "欢迎使用此脚本"})
-local about = Window:MakeTab({
-    Name = "脑叶公司脚本",
-    Icon = "rbxassetid://11109742737",
+local Tab = Window:MakeTab({
+    Name = "公告",
+    Icon = "rbxassetid://7734068321",
     PremiumOnly = false
 })
 
-about:AddParagraph("您的用户名:"," "..game.Players.LocalPlayer.Name.."")
-about:AddParagraph("您的注入器:"," "..identifyexecutor().."")
-about:AddParagraph("QQ群 : ","658358286")
+Tab:AddParagraph("作者","noob")
+Tab:AddLabel("。。。")
+Tab:AddLabel("。。。")
+Tab:AddLabel("禁止倒卖")
+
 
 local Tab = Window:MakeTab({
-  Name = "主要",
-  Icon = "rbxassetid://12493754210",
-  PremiumOnly = false
-  })
-Tab:AddButton({
-	Name = "飞行",
-	Callback = function()
-
-loadstring(game:HttpGet'https://raw.githubusercontent.com/XNEOFF/FlyGuiV3/main/FlyGuiV3.txt')()
-
-end
+    Name = "主要",
+    Icon = "rbxassetid://4483345998",
+    PremiumOnly = false
 })
 
 Tab:AddButton({
@@ -72,3 +54,17 @@ game:GetService("Players").LocalPlayer.Backpack.Baton.Animations.AttackAnimation
 game:GetService("Players").LocalPlayer.Backpack.Baton.Animations.AttackAnimations.Attack3.CooldownTimer.Value ="0.2"
     end
 })
+
+Tab:AddToggle({
+	Name = "夜视",
+	Default = false,
+	Callback = function(Value)
+		if Value then
+		    game.Lighting.Ambient = Color3.new(1, 1, 1)
+		else
+		    game.Lighting.Ambient = Color3.new(0, 0, 0)
+		end
+	end
+})
+
+OrionLib:Init()
