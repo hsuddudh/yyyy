@@ -1,7 +1,7 @@
 local CoreGui = game:GetService("StarterGui")
 
 CoreGui:SetCore("SendNotification", {
-    Title = "你的脚本名称（APT）停止更新",
+    Title = "无",
     Text = "正在加载",
     Duration = 5, 
 })
@@ -15,7 +15,7 @@ print("反挂机开启")
 local OrionLib = loadstring(game:HttpGet('https://pastebin.com/raw/SePpsSPZ'))()
 local Window = OrionLib:MakeWindow({Name = "APT脚本停止更新", HidePremium = false, SaveConfig = true,IntroText = "欢迎使用APT脚本", ConfigFolder = "欢迎APT脚本"})
 local about = Window:MakeTab({
-    Name = "脚本名称",
+    Name = "脑叶公司脚本",
     Icon = "rbxassetid://11109742737",
     PremiumOnly = false
 })
