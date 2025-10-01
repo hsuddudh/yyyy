@@ -44,6 +44,7 @@ Tab:AddButton({
     game:GetService("Players").LocalPlayer.Backpack.ClassicSword.SettingValues.MaxDamageValue.Value ="9223372036854776000"
 game:GetService("Players").LocalPlayer.Backpack.ClassicSword.SettingValues.StaminaUsage.Value ="9223372036854776000"
 game:GetService("Players").LocalPlayer.Backpack.ClassicSword.SettingValues.MinDamageValue.Value ="9223372036854776000"
+
     end
 })
 Tab:AddButton({
@@ -52,6 +53,7 @@ Tab:AddButton({
 
     game:GetService("Players").LocalPlayer.Backpack.ClassicSword.Animations.AttackAnimations.Attack1.CooldownTimer.Value ="0.2"
 game:GetService("Players").LocalPlayer.Backpack.ClassicSword.Animations.AttackAnimations.Attack2.CooldownTimer.Value ="0.2"
+
     end
 })
 Tab:AddButton({
@@ -61,6 +63,7 @@ Tab:AddButton({
 game:GetService("Players").LocalPlayer.Backpack.Baton.SettingValues.MinDamageValue.Value ="9223372036854776000"
 game:GetService("Players").LocalPlayer.Backpack.Baton.SettingValues.MaxDamageValue.Value ="9223372036854776000"
 game:GetService("Players").LocalPlayer.Backpack.Baton.SettingValues.StaminaUsage.Value ="9223372036854776000"
+
 end
 })
 Tab:AddButton({
@@ -70,5 +73,6 @@ Tab:AddButton({
 game:GetService("Players").LocalPlayer.Backpack.Baton.Animations.AttackAnimations.Attack1.CooldownTimer.Value ="0.2"
 game:GetService("Players").LocalPlayer.Backpack.Baton.Animations.AttackAnimations.Attack2.CooldownTimer.Value ="0.2"
 game:GetService("Players").LocalPlayer.Backpack.Baton.Animations.AttackAnimations.Attack3.CooldownTimer.Value ="0.2"
+
     end
 })
