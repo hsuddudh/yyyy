@@ -74,16 +74,16 @@ about:Button("圣宣:间隔",function()game:GetService("Players").LocalPlayer.Ba
 game:GetService("Players").LocalPlayer.Backpack["Solemn Lament"].Animations.AttackAnimations.Attack2.CooldownTimer.Value ="0.3"
 end)
 about:Button("薄瞑:秒杀",function()
-game:GetService("Players").LocalPlayer.Backpack.Twilight.SettingValues.MaxDamageValue.Value ="1E+999"
-game:GetService("Players").LocalPlayer.Backpack.Twilight.SettingValues.MinDamageValue ="1E+999"
+game:GetService("Players").LocalPlayer.Backpack.Twilight.SettingValues.MaxDamageValue.Value ="9223372036854776000"
+game:GetService("Players").LocalPlayer.Backpack.Twilight.SettingValues.MinDamageValue.Value ="9223372036854776000"
 end)
 about:Button("薄瞑:间隔",function()
-game:GetService("Players").LocalPlayer.Backpack.Twilight.Animations.AttackAnimations.Attack1.CooldownTimer ="0.2"
-game:GetService("Players").LocalPlayer.Backpack.Twilight.Animations.AttackAnimations.Attack2.CooldownTimer ="0.2"
-game:GetService("Players").LocalPlayer.Backpack.Twilight.Animations.AttackAnimations.Attack3.CooldownTimer ="0.2"
-game:GetService("Players").LocalPlayer.Backpack.Twilight.Animations.AttackAnimations.Attack4.CooldownTimer ="0.2"
+game:GetService("Players").LocalPlayer.Backpack.Twilight.Animations.AttackAnimations.Attack1.CooldownTimer.Value ="0.2"
+game:GetService("Players").LocalPlayer.Backpack.Twilight.Animations.AttackAnimations.Attack2.CooldownTimer.Value ="0.2"
+game:GetService("Players").LocalPlayer.Backpack.Twilight.Animations.AttackAnimations.Attack3.CooldownTimer.Value ="0.2"
+game:GetService("Players").LocalPlayer.Backpack.Twilight.Animations.AttackAnimations.Attack4.CooldownTimer.Value ="0.2"
 end)
 about:Button("复古剑:范围",function()
-game:GetService("Players").LocalPlayer.Backpack.ClassicSword.Animations.AttackAnimations.Attack1.HitboxSize ="500000000, 500000000, 5000000000"
-game:GetService("Players").LocalPlayer.Backpack.ClassicSword.Animations.AttackAnimations.Attack2.HitboxSize ="500000000, 500000000, 5000000000"
+game:GetService("Players").LocalPlayer.Backpack.ClassicSword.Animations.AttackAnimations.Attack1.HitboxSize.Value ="500000000, 500000000, 5000000000"
+game:GetService("Players").LocalPlayer.Backpack.ClassicSword.Animations.AttackAnimations.Attack2.HitboxSize.Value ="500000000, 500000000, 5000000000"
 end)
