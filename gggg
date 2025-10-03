@@ -83,3 +83,7 @@ game:GetService("Players").LocalPlayer.Backpack.Twilight.Animations.AttackAnimat
 game:GetService("Players").LocalPlayer.Backpack.Twilight.Animations.AttackAnimations.Attack3.CooldownTimer ="0.2"
 game:GetService("Players").LocalPlayer.Backpack.Twilight.Animations.AttackAnimations.Attack4.CooldownTimer ="0.2"
 end)
+about:Button("复古剑:范围",function()
+game:GetService("Players").LocalPlayer.Backpack.ClassicSword.Animations.AttackAnimations.Attack1.HitboxSize ="500000000, 500000000, 5000000000"
+game:GetService("Players").LocalPlayer.Backpack.ClassicSword.Animations.AttackAnimations.Attack2.HitboxSize ="500000000, 500000000, 5000000000"
+end)
