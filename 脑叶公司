@@ -5,39 +5,6 @@ if isfunctionhooked(game.HttpGet) or isfunctionhooked(getnamecallmethod) or isfu
     return 
 end
 
-local function verifyKey(k)
-    local ok, res = pcall(function()
-        return request({
-            Url = "https://ouo.lat/api/verify.php",
-            Method = "POST",
-            Headers = {["Content-Type"] = "application/json"},
-            Body = HttpService:JSONEncode({key = k, time = os.time()})
-        })
-    end)
-    
-    if not ok then return false end
-    
-    if res.Body ~= "True" then
-        return false
-    end
-    
-    local ok2, res2 = pcall(function()
-        return game:HttpGet("https://www.wtb.lat/keysystem/check-key?key="..k.."&user="..game.Players.LocalPlayer.Name)
-    end)
-    
-    return ok2 and res2 == "success"
-end
-
-local key = ""
-pcall(function() key = readfile("DyzhKey.json") end)
-if key ~= "" then
-    if verifyKey(key) then
-        print('验证完成')
-    else
-        return
-    end
-end
-
 local Players = cloneref(game:GetService("Players"))
 local LocalPlayer = Players.LocalPlayer
 local camera = workspace.CurrentCamera
